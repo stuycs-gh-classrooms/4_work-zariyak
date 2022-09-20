@@ -1,13 +1,28 @@
+//Piggy piggy poo :D
 size(800,500);
 noStroke();
-background(#ACF1FF);
+background(#F0D8FF);
+fill(#ACF1FF);
+rect(0, 0, 400, 500);
+
+//background rays
+fill(#C9B1D8, 65);
+triangle(400, 200, 800, 0, 650, 0);
+triangle(400, 200, 800, 125, 800, 225);
+triangle(400, 200, 800, 400, 750, 500);
+fill(#9EC9D1, 65);
+triangle(400, 200, 0, 0, 150, 0);
+triangle(400, 200, 0, 125, 0, 225);
+triangle(400, 200, 0, 400, 50, 500);
+
 fill(#BBE894);
 rect(0, 399, 800, 125);
+
 //Eric
-noStroke();
+stroke(#C9C9C9);
 fill(#FFFFFF);
 circle(400, 200, 400);
-fill(210,210,10);
+fill(210,210,10, 180);
 triangle(228, 300, 400, 0, 572, 300);
 fill(#FFFFFF);
 ellipse(400, 150, 165, 75);
@@ -18,6 +33,7 @@ stroke(0,200,240);
 
 // august
 // cyan
+noStroke();
 fill(0,200,240);
 
 rect(500,200,100,180);
