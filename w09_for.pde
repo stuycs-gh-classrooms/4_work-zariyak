@@ -1,3 +1,5 @@
+// edited later to improve
+
 int radius;
 int lineCount;
 int circleCount;
@@ -14,24 +16,27 @@ void setup() {
 }//setup
 
 void drawGrid(int numLines) {
-  int count = 0;
+//  int count = 0;
   int spacingX = width/(numLines+1);
   int spacingY = height/(numLines+1);
 
-//  int x = spacingX;
-//  int y = spacingY;
-  for (int x = spacingX; count < numLines; x += spacingX) {
+  int x = spacingX;
+  int y = spacingY;
+  for (int count = 0; count < numLines; count = count + 1) {
     line(x, 0, x, height);
-  }
-  for (int y = spacingY; count < numLines; y += spacingY) {
     line(0, y, width, y);
+    x += spacingX;
+    y += spacingY;
   }
+//  for (int y = spacingY; count < numLines; y += spacingY) {
+//    line(0, y, width, y);
+//  }
 //  while (count < numLines) {
 //    line(x, 0, x, height);
 //    line(0, y, width, y);
 //    x+= spacingX;
 //    y+= spacingY;
-//   count++;
+//    count++;
 //  }//while 
   
 }//drawGrid
@@ -40,8 +45,9 @@ void drawGrid(int numLines) {
 
 void circleRow(int startX, int startY, int numCircles, int d) {
 //  int count = 0;
-  for (int count = 0; count < numCircles; startX += d) {
+  for (int count = 0; count < numCircles; count = count + 1) {
     circle(startX, startY, d);
+    startX += d;
   }
 //  while ( count < numCircles ) {
 //    circle(startX, startY, d);
