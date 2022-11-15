@@ -1,3 +1,5 @@
+// all the lines r connected to (0,0) for some reason??
+
 int[] xvals, yvals;
 int numPoints, maxPoints;
 
@@ -12,23 +14,18 @@ void setup() {
 
 void draw() {
   background(#D1E4FF);
+  if(mousePressed == true) {
+    xvals[numPoints] += mouseX;
+    yvals[numPoints] += mouseY;
+    numPoints++;
+  } //if
   drawLines(xvals, yvals);
-  for(int i = 0; i < maxPoints; i++) {
-    if(mousePressed == true) {
-        xvals[i] += mouseX;
-        yvals[i] += mouseX;
-    } //if
-  } //for
 } //draw
 
 void drawLines(int[] xs, int[] ys) {
+  strokeWeight(3);
   stroke(#FFFFFF);
-  strokeWeight(4);
-  for(int i = 0; i < maxPoints; i++) {
+  for(int i = 0; i < maxPoints-1; i++) {
     line(xs[i], ys[i], xs[i+1], ys[i+1]);
   } //for
 } //drawLines
-
-//void drawLines() {
-//  if(mousePressed == true)
-//}
