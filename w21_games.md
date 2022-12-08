@@ -33,3 +33,15 @@ A)the spaceship and the bullet
 
 Q)What elements are controlled by the computer?
 A)The moving grid of invaders and their bullets
+
+Q)How does player control their element?
+A)Spaceships moves and shoots based on input from player
+
+Q)How do the non-player controlled elements behave (movement, positions, randomness, etc)?
+A)The invaders are arranged in a grid that moves horizontally and shoot bullets randomly.
+
+Q)What classes would you write?
+A) Spaceship, invaders
+
+Q)Would you use an array?
+A)Yes,for the moving grid of invaders.
